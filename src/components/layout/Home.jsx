@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { load } from '../../utils/load';
 import { API_URL } from '../../config';
 
-function Main() {
+function Home() {
   const [dresses, setDresses] = useState([]);
   const [chosenDress, setChosenDress] = useState(null);
 
@@ -46,4 +46,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Home;

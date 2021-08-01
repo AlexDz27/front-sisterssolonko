@@ -1,4 +1,4 @@
-function Header() {
+const Header = () => {
   return (
     <header className="header mb-20">
       <div className="section-with-bar container mx-auto flex justify-between items-center py-8 mb-12">

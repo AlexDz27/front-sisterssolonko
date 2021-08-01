@@ -1,4 +1,4 @@
-function Footer() {
+const Footer = () => {
   return (
     <footer className="container mx-auto pt-20">
       <div className="text-center">
@@ -51,8 +51,7 @@ function Footer() {
         Луцкая 60-72, email: paulashop@yandex.by
       </section>
     </footer>
-
-);
+  );
 }
 
 export default Footer;
