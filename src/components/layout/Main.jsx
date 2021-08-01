@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { load } from '../../utils/load';
 import { API_URL } from '../../config';
-import DressPane from '../DressPane';
 
 function Main() {
   const [dresses, setDresses] = useState([]);
@@ -40,8 +39,6 @@ function Main() {
           ))}
         </section>
       </section>
-
-      <DressPane dress={chosenDress} />
     </main>
   );
 }
