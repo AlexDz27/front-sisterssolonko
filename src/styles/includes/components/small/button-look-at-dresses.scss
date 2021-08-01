@@ -1,0 +1,27 @@
+@use '../../variables';
+
+.button-look-at-dresses {
+  border-radius: 9999px;
+  background-color: white;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  text-align: center;
+  color: variables.$black;
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background-color 300ms;
+
+  &:hover {
+    background-color: variables.$white;
+    color: variables.$black;
+  }
+
+  &:hover .growing-underline::after {
+    width: 100%;
+  }
+}

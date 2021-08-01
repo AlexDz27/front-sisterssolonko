@@ -1,0 +1,36 @@
+@use 'variables';
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-size: variables.$font-size;
+  font-weight: normal;
+  margin: 0;
+  background-color: variables.$bg-color;
+  color: variables.$font-color;
+}
+
+a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+
+  transition: color .3s;
+  &:hover {
+    color: white;
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+
+  transition: color .3s;
+  &:hover {
+    color: white;
+  }
+}

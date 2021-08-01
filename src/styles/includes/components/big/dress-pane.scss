@@ -1,0 +1,31 @@
+.dress-pane {
+  width: 70vw;
+  background-color: #ccc;
+  color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  opacity: .9;
+  padding: 50px 50px;
+  box-sizing: border-box;
+}
+
+.dress-pane--before-animated {
+  right: -2000px;
+}
+.dress-pane--animated {
+  right: 0;
+}
+
+.dress-pane__close-button {
+  position: absolute;
+  left: -80px;
+  color: white;
+  background-color: #ccc;
+  border-radius: 100%;
+  font-size: 42px;
+  width: 60px;
+  height: 60px;
+  line-height: 64px;
+}

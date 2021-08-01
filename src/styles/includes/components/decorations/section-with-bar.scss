@@ -1,0 +1,5 @@
+@use '../../variables';
+
+.section-with-bar {
+  border-bottom: 1px solid variables.$white;
+}

@@ -1,0 +1,23 @@
+@use '../../variables';
+
+.burger {
+  width: 45px;
+  height: 45px;
+
+  opacity: .8;
+
+  transition: opacity .3s;
+  &:hover {
+    opacity: 1;
+  }
+}
+.burger__bar {
+  background-color: variables.$white;
+
+  height: 1px;
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

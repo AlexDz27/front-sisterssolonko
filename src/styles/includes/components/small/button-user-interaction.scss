@@ -1,0 +1,8 @@
+.button-user-interaction {
+  opacity: .8;
+
+  transition: opacity .3s;
+  &:hover {
+    opacity: 1;
+  }
+}
