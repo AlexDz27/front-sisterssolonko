@@ -35,7 +35,10 @@ function Main() {
 
         <section className="grid grid-cols-3 gap-4">
           {dresses.map(dress => (
-            <img onClick={() => setChosenDress(dress)} className="featured-dress" src={`/images/dresses/${dress.image}`} alt={dress.name} key={dress.id} />
+            <a href={`javascript:void(${dress.id});`} className="dress-image" key={dress.id}>
+              <img className="dress-image__image" onClick={() => setChosenDress(dress)} src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
+              <img className="dress-image__image-hidden" src={`/images/dresses/${dress.second_display_photo}`} alt={dress.name} />
+            </a>
           ))}
         </section>
       </section>

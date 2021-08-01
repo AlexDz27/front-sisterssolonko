@@ -1,0 +1,28 @@
+.dress-image {
+  position: relative;
+
+  max-width: 375px; // TODO: remove when switching from grid to flexbox (?) This is to remove unnecessary content space
+
+  &:hover {
+    .dress-image__image {
+      opacity: 0;
+    }
+
+    .dress-image__image-hidden {
+      opacity: 1;
+    }
+  }
+}
+
+.dress-image__image {
+  max-width: 375px;
+  transition: opacity .4s;
+}
+
+.dress-image__image-hidden {
+  max-width: 375px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity .4s;
+}
