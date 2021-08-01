@@ -166,8 +166,28 @@ button:hover {
   margin-left: 50px;
 }
 
-.featured-dress {
-  cursor: pointer;
+.dress-image {
+  position: relative;
+  max-width: 375px;
+}
+.dress-image:hover .dress-image__image {
+  opacity: 0;
+}
+.dress-image:hover .dress-image__image-hidden {
+  opacity: 1;
+}
+
+.dress-image__image {
+  max-width: 375px;
+  transition: opacity 0.4s;
+}
+
+.dress-image__image-hidden {
+  max-width: 375px;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.4s;
 }
 
 .header__col {
@@ -176,29 +196,4 @@ button:hover {
 
 .footer__legal-info {
   font-size: 9px;
-}
-
-.preview {
-  width: 70vw;
-  background-color: #ccc;
-  color: black;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  opacity: 0.9;
-  padding: 50px 50px;
-  box-sizing: border-box;
-}
-
-.preview__close-button {
-  position: absolute;
-  left: -80px;
-  color: white;
-  background-color: #ccc;
-  border-radius: 100%;
-  font-size: 42px;
-  width: 60px;
-  height: 60px;
-  line-height: 64px;
 }
