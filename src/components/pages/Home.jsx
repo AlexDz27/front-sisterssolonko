@@ -5,7 +5,6 @@ import { API_URL } from '../../config';
 
 const Home = () => {
   const [dresses, setDresses] = useState([]);
-  const [chosenDress, setChosenDress] = useState(null);
 
   // Load dresses
   useEffect(() => {
@@ -43,7 +42,7 @@ const Home = () => {
         <section className="grid grid-cols-3 gap-4">
           {dresses.map(dress => (
             <Link to={`/dresses/${dress.id}`} className="dress-image" key={dress.id}>
-              <img className="dress-image__image" onClick={() => setChosenDress(dress)} src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
+              <img className="dress-image__image" src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
               <img className="dress-image__image-hidden" src={`/images/dresses/${dress.second_display_photo}`} alt={dress.name} />
             </Link>
           ))}

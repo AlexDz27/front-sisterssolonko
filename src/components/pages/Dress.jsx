@@ -1,11 +1,13 @@
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const Dress = () => {
+  const { id } = useParams();
+
   return (
     <main className="container mx-auto">
-      <img src="/images/dresses/woman-1_1.jpg" alt="" />
+      <h1>{id}</h1>
     </main>
   );
-}
+};
 
 export default Dress;

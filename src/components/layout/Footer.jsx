@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="container mx-auto pt-20">
       <div className="text-center">
-        <a href="/">
+        <Link to="/">
           <img src="/images/logo.png" alt="Логотип 'Сёстры Солонко'" height="120" />
-        </a>
+        </Link>
       </div>
 
       <nav className="flex justify-center space-x-6 mb-12">

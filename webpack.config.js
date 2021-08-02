@@ -10,7 +10,7 @@ module.exports = {
   mode: 'development',
   devServer: {
     contentBase: './public',
-    historyApiFallback: true
+    historyApiFallback: true, // don't send request to server when reloading page (useful when working on layout of a page)
   },
   module: {
     rules: [
