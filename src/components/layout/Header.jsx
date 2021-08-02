@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Header = () => {
   return (
     <header className="header mb-20">
@@ -78,9 +80,9 @@ const Header = () => {
       </div>
 
       <nav className="container mx-auto flex justify-center">
-        <a className="button-look-at-dresses" href="#">
+        <Link to="/dresses" className="button-look-at-dresses">
           <span className="growing-underline growing-underline--black">Смотреть платья</span>
-        </a>
+        </Link>
       </nav>
     </header>
   );

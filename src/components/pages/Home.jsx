@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { load } from '../../utils/load';
 import { API_URL } from '../../config';
 
-function Home() {
+const Home = () => {
   const [dresses, setDresses] = useState([]);
   const [chosenDress, setChosenDress] = useState(null);
 
@@ -16,7 +17,7 @@ function Home() {
   }, []);
 
   return (
-    <main className="main">
+    <main className="home">
       <section className="collection-image-container mb-20">
         <div className="collection-image-container__interaction-container">
           <div className="collection-image-container-interaction-container__container">
@@ -35,10 +36,10 @@ function Home() {
 
         <section className="grid grid-cols-3 gap-4">
           {dresses.map(dress => (
-            <a href={`javascript:void(${dress.id});`} className="dress-image" key={dress.id}>
+            <Link to={`/dresses/${dress.id}`} className="dress-image" key={dress.id}>
               <img className="dress-image__image" onClick={() => setChosenDress(dress)} src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
               <img className="dress-image__image-hidden" src={`/images/dresses/${dress.second_display_photo}`} alt={dress.name} />
-            </a>
+            </Link>
           ))}
         </section>
       </section>
