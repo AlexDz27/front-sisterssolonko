@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
-
 const Header = () => {
   return (
-    <header className="header mb-20">
+    <header className="header">
       <div className="section-with-bar container mx-auto flex justify-between items-center py-8 mb-12">
         <div className="header__col">
           <button className="burger" type="button" aria-label="Открыть навигацию">
@@ -78,12 +76,6 @@ const Header = () => {
           </section>
         </div>
       </div>
-
-      <nav className="container mx-auto flex justify-center">
-        <Link to="/dresses" className="button-look-at-dresses">
-          <span className="growing-underline growing-underline--black">Смотреть платья</span>
-        </Link>
-      </nav>
     </header>
   );
 }
