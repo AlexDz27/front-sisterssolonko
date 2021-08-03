@@ -1,19 +1,7 @@
-import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { load } from '../../utils/load';
-import { API_URL } from '../../config';
 
 const Home = () => {
-  const [dresses, setDresses] = useState([]);
-
-  // Load dresses
-  useEffect(() => {
-    (async () => {
-      const dresses = await load(`${API_URL}/dresses`);
-
-      setDresses(dresses);
-    })();
-  }, []);
+  if (!window.dresses) return null;
 
   return (
     <main className="home">
@@ -40,7 +28,7 @@ const Home = () => {
         <h2 className="text-center">Взгляните на новинки последней коллекции</h2>
 
         <section className="grid grid-cols-3 gap-4">
-          {dresses.map(dress => (
+          {window.dresses.map(dress => (
             <Link to={`/dresses/${dress.id}`} className="dress-image" key={dress.id}>
               <img className="dress-image__image" src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
               <img className="dress-image__image-hidden" src={`/images/dresses/${dress.second_display_photo}`} alt={dress.name} />
