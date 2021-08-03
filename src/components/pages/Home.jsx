@@ -5,12 +5,6 @@ const Home = () => {
 
   return (
     <main className="home">
-      <nav className="container mx-auto flex justify-center mb-60px">
-        <Link to="/dresses" className="button-look-at-dresses">
-          <span className="growing-underline growing-underline--black">Смотреть платья</span>
-        </Link>
-      </nav>
-
       <section className="collection-image-container mb-20">
         <div className="collection-image-container__interaction-container">
           <div className="collection-image-container-interaction-container__container">

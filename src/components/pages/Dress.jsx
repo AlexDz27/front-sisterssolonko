@@ -6,10 +6,21 @@ const Dress = () => {
   const { id } = useParams();
   const dress = window.dresses.find(dress => dress.id == id);
 
+  // TODO: на бэке сделать, чтобы мне приходил именно объект, а не строка?
+  console.log(dress.details)
+
   return (
     <main className="container mx-auto">
-      <h1>{id}</h1>
-      <img src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
+      <div className="grid grid-cols-2">
+        <section>
+          <h1>{dress.name}</h1>
+          <p>{dress.description}</p>
+        </section>
+
+        <section>
+          <img src={`/images/dresses/${dress.display_photo}`} alt={dress.name} />
+        </section>
+      </div>
     </main>
   );
 };

@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
     <header className="header">
       <div className="section-with-bar container mx-auto flex justify-between items-center py-8 mb-12">
@@ -78,6 +81,17 @@ const Header = () => {
           </section>
         </div>
       </div>
+
+      <nav className="container mx-auto flex justify-center mb-60px">
+        {location.pathname === '/'
+          ? <Link to="/dresses" className="button-look-at-dresses">
+              <span className="growing-underline growing-underline--black">Смотреть платья</span>
+            </Link>
+          : <Link to="/dresses">
+              <span className="growing-underline">Смотреть платья</span>
+            </Link>
+        }
+      </nav>
     </header>
   );
 };
