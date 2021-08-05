@@ -8,6 +8,7 @@ const Dress = () => {
 
   // TODO: на бэке сделать, чтобы мне приходил именно объект, а не строка?
   console.log(dress.details)
+  console.log(JSON.parse(dress.details));
 
   return (
     <main className="container mx-auto">
