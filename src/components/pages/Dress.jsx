@@ -6,9 +6,7 @@ const Dress = () => {
   const { id } = useParams();
   const dress = window.dresses.find(dress => dress.id == id);
 
-  // TODO: на бэке сделать, чтобы мне приходил именно объект, а не строка?
-  console.log(dress.details)
-  console.log(JSON.parse(dress.details));
+  console.log(dress);
 
   return (
     <main className="container mx-auto">
